@@ -1,0 +1,140 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Form</title>
+  <link rel="stylesheet" type="text/css" href="form1.css">
+  <meta charset="utf-8">
+
+</head>
+
+<body>
+  <header>
+    <h1 id="title">Event Feedback</h1>
+    <hr>
+    <p id="description">
+      Thank you for participating in our event.
+      We hope you had as much fun attending as we did organizing it.
+      We want to hear your feedback so we can keep improving our logistics
+      and content. Please fill this quick survey and let us know your
+      thoughts for a chance to win tickets for next year's events.
+    </p>
+    <hr>
+  </header>
+  <main>
+    <form>
+      <h4>How satisfied were you with the event?</h4>
+      <label>
+        <input name="feedback" value="very dissatisfied" type="radio" id="event" checked />very dissatisfied</label>
+      <label>
+        <input name="feedback" value="dissatisfied" type="radio" id="event" />dissatisfied</label>
+      <label>
+        <input name="feedback" value="neutral" type="radio" id="event" />neutral</label>
+      <label>
+        <input name="feedback" value="satisfied" type="radio" id="event" />satisfied</label>
+      <label>
+        <input name="feedback" value=" very satisfied" type="radio" id="event" /> very satisfied</label>
+    </form>
+    <hr>
+    <form>
+      <h4>How relevant and helpful do you think it was for your job?</h4>
+      <label>
+        <input name="relevance" value="not relevant" type="radio" id="jobrel" checked />not relevant</label>
+      <label>
+        <input name="relevance" value="neutral" type="radio" id="jobrel" />neutral</label>
+      <label>
+        <input name="relevance" value="relevant" type="radio" id="jobrel" />relevant</label>
+      <label>
+        <input name="relevance" value="exactly what I was looking for" type="radio" id="jobrel" />exactly what I was looking for</label>
+    </form>
+    <hr>
+    <form>
+      <h4>What were your key take aways from the event?</h4>
+      <div>
+        <textarea rows="5" id="comment"></textarea>
+      </div>
+    </form>
+
+    <hr>
+    <h4>Were you satisfied with the logistics?</h4>
+    <p>Check all that applies</p>
+    <form action="/action_page.php" method="get" id="survey-form">
+      <input type="checkbox" name="vehicle" value="Accomodation" checked>Accomodation<br>
+      <input type="checkbox" name="vehicle" value="Welcome Kit"> Welcome Kit<br>
+      <input type="checkbox" name="vehicle" value="Emails">Communication Emails<br>
+      <input type="checkbox" name="vehicle" value="Transportation">Transportation<br>
+      <input type="checkbox" name="vehicle" value="Welcome Activity">Welcome Activity<br>
+      <input type="checkbox" name="vehicle" value="Venue">Venue<br>
+      <input type="checkbox" name="vehicle" value="Activities">Activities<br>
+      <input type="checkbox" name="vehicle" value="Closing Ceremony">Closing Ceremony<br>
+      <br>
+    </form>
+    <hr>
+
+    <form id="survey-form">
+      <h4>Claim your free ticket for the next event</h4>
+      <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+      </div>
+      <br>
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="username@jpmorgan.com" required maxLength="80" pattern=".+@jpmorgan.com" title="Please provide only a J.P. Morgan corporate e-mail address" size="52" />
+      </div>
+
+      <div class="form-group">
+        <p>Date:</p>
+        <select id="dropdown" name="date" class="form-control" required>
+          <optgroup label="September">
+            <option value="7-9">7-9 Sept</option>
+            <option value="14-16">14-16 Sept</option>
+            <option value="21-23">21-23 Sept</option>
+          </optgroup>
+          <optgroup label="October">
+            <option value="5-7">5-7 Oct</option>
+            <option value="12-14">12-14 Oct</option>
+            <option value="26-28">26-28 Oct</option>
+          </optgroup>
+          <optgroup label="November">
+            <option value="2-4">2-4 Nov</option>
+            <option value="9-11">9-11 Nov</option>
+            <option value="16-18">16-18 Nov</option>
+          </optgroup>
+          <optgroup label="December">
+            <option value="7-9">7-9 Dec</option>
+            <option value="14-16">14-16 Dec</option>
+
+          </optgroup>
+        </select>
+      </div>
+
+      <br>
+
+      <div>
+        <label id="number-label" for="number">Tickets Required<span class="clue"></span></label>
+        <label>
+          <input name="number" value="1" type="radio" id="ticket" checked />1</label>
+        <label>
+          <input name="number" value="2" type="radio" id="ticket" />2</label>
+        <label>
+          <input name="number" value="3" type="radio" id="ticket" />3</label>
+        <label>
+      </div>
+      <br>
+      <div>
+        <label id="number-label" for="number">How many guests are you bringing?<span class="clue"></span></label>
+        <input type="number" name="number" id="number" min="1" max="10" placeholder="number" />
+      </div>
+
+      <br>
+
+      <p>Comments or questions</p>
+      <textarea id="bio" name="user_bio" rows="4" cols="60" placeholder="Comments or questions">                </textarea>
+      <button id="submit" type="submit">Submit Feedback and Claim Your Free Tickets</button>
+    </form>
+  </main>
+</body>
+
+</html>
